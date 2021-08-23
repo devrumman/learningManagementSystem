@@ -17,7 +17,7 @@
         <!-- Page Body Content End -->
           <div class="card bd-0 shadow-base">
             <div class="d-md-flex justify-content-between pd-25">
-
+              @include('backend.flash.message.blade')
               <!-- Tabel Content Stert -->
               <div class="bd bd-gray-300 rounded table-responsive">
                 <table class="table table-bordered table-hover table-custom">
@@ -49,24 +49,53 @@
                         <td>
                           @if($branch->status == 1)
                             <span class="badge badge-success">Active</span> 
-                          @elseif($branch->status == 1)
+                          @elseif($branch->status == 2)
                             <span class="badge badge-danger">Inactive</span>
                           @endif
                         </td>
                         <td>
                           <ul class="custom-action">
                             <li>
-                              <a href="">
+                              <a href="{{route('branch.edit', $branch->id)}}">
                                 <i class="fa fa-edit"></i>
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="" data-toggle="modal" data-target="#branch{{$branch->id}}">
                                 <i class="fa fa-trash"></i>
                               </a>
                             </li>
                           </ul>
                         </td>
+                        <!--Delete Start Modal -->
+                          <div class="modal fade" id="branch{{$branch->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Do You Confirm To Delete This Branch</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <div class="modal-button">
+                                    <ul>
+                                      <li>
+                                        <form action="{{route('branch.destroy', $branch->id)}}" method="POST">
+                                          @csrf
+                                          <button type="submit" class="btn btn-danger">Confirm</button>
+                                        </form>
+                                      </li>
+                                      <li>
+                                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!--Delete End Modal -->  
                       </tr>
                     @endforeach 
                   </tbody>

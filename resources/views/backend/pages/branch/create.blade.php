@@ -17,7 +17,7 @@
         <!-- Page Body Content End -->
           <div class="card bd-0 shadow-base">
             <div class="pd-25">
-                       
+              @include('backend.flash.message')         
               <form action="{{route('branch.store')}}" method="POST">
                 @csrf
                 <div class="row">
@@ -46,12 +46,12 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label>Address Line-1</label>
+                      <label>Address Line- 1</label>
                       <input type="text" name="address_line1" class="form-control" required="required" autocomplete="off">
                     </div>
 
                     <div class="form-group">
-                      <label>Address Line-2</label>
+                      <label>Address Line- 2</label>
                       <input type="text" name="address_line2" class="form-control" required="required" autocomplete="off">
                     </div>
                                       

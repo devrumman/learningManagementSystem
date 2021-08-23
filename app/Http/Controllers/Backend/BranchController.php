@@ -38,6 +38,15 @@ class BranchController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([ 
+            'name'  => 'required|max:255',
+            'phone' => 'required|max:255'
+        ],
+        [
+            'name.required'  => 'Branch Name Can Not Be Empty',
+            'phone.required' => 'Phone Number Can Not Be Empty'
+        ]);
+
         $branch = new Branch();
 
         $branch->name          = $request->name;
@@ -50,7 +59,7 @@ class BranchController extends Controller
         $branch->status        = $request->status;
 
         $branch->save();
-        return redirect()->route('branch.manage');
+        return redirect()->route('branch.manage')->with('seccess', 'New Branch Added Successfully');
     }
     /**
      * Display the specified resource.
@@ -91,7 +100,18 @@ class BranchController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $branch = Branch::find($id);
+        $branch->name          = $request->name;
+        $branch->bangla_name   = $request->bangla_name;
+        $branch->slug          = Str::slug($request->name);
+        $branch->address_line1 = $request->address_line1;
+        $branch->address_line2 = $request->address_line2;
+        $branch->email         = $request->email;
+        $branch->phone         = $request->phone;
+        $branch->status        = $request->status;
+
+        $branch->save();
+        return redirect()->route('branch.manage');
     }
 
     /**
@@ -102,6 +122,12 @@ class BranchController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $branch = Branch::find($id);
+
+        if ( !is_null($branch) )
+        {
+            $branch->delete();
+            return redirect()->route('branch.manage');
+        }
     }
 }
