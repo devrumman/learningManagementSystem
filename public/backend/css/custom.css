@@ -1,15 +1,29 @@
 .table-custom {
 	margin-bottom: 0rem;
 }
-
 .table thead > tr > th, .table tfoot > tr > th{
 	white-space: nowrap;
+}
+
+.message-success{
+	margin: 25px 25px 0;
+	padding: 20px 20px 6px;
+	color: #fff;
+	background: green;
+	display: block;
+}
+
+.message-info{
+	margin: 5px;
+	padding: 15px 15px;
+	display: block;
 }
 
 
 .alert{
 	margin-bottom: 0rem;
 }
+
 
 .custom-action{
 	padding: 0;
@@ -20,14 +34,16 @@
 	list-style: none;
 	display: inline;
 	margin: 0 1px;
-
 }
+
+
 .fa-edit{
 	color: #198754;
 }
 .fa-trash{
 	color: #dc3545;
 }
+
 
 .modal-button ul{
 	padding: 0;

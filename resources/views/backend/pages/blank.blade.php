@@ -13,11 +13,10 @@
   <div class="br-pagebody">
     <div class="row">
       <div class="col-lg-12">
-
         <!-- Page Body Content End -->
           <div class="card bd-0 shadow-base">
             <div class="d-md-flex justify-content-between pd-25">
-              
+
             </div><!-- d-flex -->
 
             <div class="pd-l-25 pd-r-15 pd-b-25">
@@ -27,7 +26,8 @@
         <!-- Page Body Content End -->
 
       </div>
-    </div>  
-  </div>    
+    </div>
+  </div>
 
-@endsection 
+@endsection
+

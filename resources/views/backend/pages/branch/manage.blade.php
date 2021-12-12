@@ -16,8 +16,9 @@
 
         <!-- Page Body Content End -->
           <div class="card bd-0 shadow-base">
+            @include('backend.flash-message')
+
             <div class="d-md-flex justify-content-between pd-25">
-              @include('backend.flash.message.blade')
               <!-- Tabel Content Stert -->
               <div class="bd bd-gray-300 rounded table-responsive">
                 <table class="table table-bordered table-hover table-custom">
@@ -101,7 +102,7 @@
                   </tbody>
                 </table>
                 @if ( $branches->count() == 0 )
-                  <div class="alert alert-info">
+                  <div class="alert alert-info message-info">
                     No Branch Added Yet. Please Add A Branch Info.
                   </div>
                 @endif  

@@ -24,16 +24,8 @@ class CreateBranchesTable extends Migration
             $table->string('phone')->nullable();
             $table->integer('status')->default(1)->comment('1= Active, 2= Inactive');
             $table->timestamps();
-
-
-
-
-
-
-
         });
     }
-
     /**
      * Reverse the migrations.
      *

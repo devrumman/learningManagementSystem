@@ -40,7 +40,7 @@ class BranchController extends Controller
     {
         $request->validate([ 
             'name'  => 'required|max:255',
-            'phone' => 'required|max:255'
+            'phone' => 'required|max:255',
         ],
         [
             'name.required'  => 'Branch Name Can Not Be Empty',

@@ -5,7 +5,7 @@
   <div class="br-pagetitle">
     <i class="icon ion-ios-home-outline"></i>
     <div>
-      <h4>Branch Manage Page</h4>
+      <h4>Create A New Branch</h4>
       <p class="mg-b-0">Manage The Branch Page. All Branch Info Here.</p>
     </div>
   </div>
@@ -16,14 +16,15 @@
 
         <!-- Page Body Content End -->
           <div class="card bd-0 shadow-base">
+            @include('backend.flash-message') 
+
             <div class="pd-25">
-              @include('backend.flash.message')         
               <form action="{{route('branch.store')}}" method="POST">
                 @csrf
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label>Branch Name</label>
+                      <label>Branch English Name</label>
                       <input type="text" name="name" class="form-control" required="required" autocomplete="off">
                     </div>
                   

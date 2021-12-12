@@ -1,3 +1,9 @@
+{{-- @if (Auth::user()->role == 1)
+
+@elseif(Auth::user()->role == 2)
+    No accses.
+@endif --}}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
