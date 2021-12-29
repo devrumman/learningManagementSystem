@@ -3450,143 +3450,118 @@ hr {
 .page-item.disabled .page-link {
     border-color: #f4f4f4;
 }
-
-/*===========================*/
-/*Team Section*/
-/*===========================*/
-
-.team-section {
+/* Our Mentor Page */
+.mentor-section {
+    padding: 50px 0 50px;
+}
+.tabs-left {
+    border-bottom: none;
+}
+.tabs-left li {
+    width: 100%;
+    /*padding: 10px 0;*/
     text-align: center;
-    background: linear-gradient(
-            rgba(231, 241, 248, 0.9),
-            rgba(231, 241, 248, 0.4)
-        ),
-        url(img/portfolio-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom top;
-    background-attachment: fixed;
+    margin: 0;
 }
-
-.team-section h2 {
-    color: #3c4761;
-}
-
-.team-section h2::after {
-    background-color: #c8d9e5;
-}
-
-.team-member {
-    margin-top: 4.5rem;
-    margin-bottom: 3.5rem;
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
-}
-
-.team-section h3 {
-    color: #27283d;
-}
-
-.role {
-    color: #30bae7;
-    font-size: 1.6rem;
-    text-transform: capitalize;
-    margin-top: 0.6rem;
-    display: inline-block;
-}
-
-.team-section .box p {
-    color: #3c4761;
-    line-height: 2.2rem;
-}
-
-.social-link {
-    margin-top: 4.5rem;
-}
-
-.social-link ul li {
-    display: inline-block;
-    margin: 0 0.5rem;
-}
-
-.social-link ul li a:link {
+.tabs-left > li a {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #2e367d;
+    display: block;
     color: #fff;
 }
-
-.social-link ul li a:link i::before {
-    background: #bdd1df;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 2rem;
-    padding: 1rem;
-    transition: 0.8s;
+.tabs-left > li a:hover {
+    background-color: #1daef0;
 }
-
-.social-link ul li a:hover i::before {
-    background: #393939;
-    transform: rotate(360deg);
+.tabs-left > li a.active {
+    background-color: #1daef0;
 }
-
-.social-link .fa,
-.fab,
-.fal,
-.far,
-.fas {
-    color: darkblue;
+.mentor-card {
+    border: 1px solid transparent;
+    background: #fff;
+    box-shadow: 0 8px 28px 2px rgb(61 61 61 / 7%);
+    padding: 10px;
+    margin: 0 0 20px;
 }
-
-/*===========================*/
-/*Skills Section*/
-/*===========================*/
-
-.skill-section {
+.mentor-card img {
+    /*width: 233px;*/
+    height: 233px;
+    display: block;
+    margin: 0 auto;
+}
+.mentor-card h4 {
     text-align: center;
-    background: linear-gradient(
-            rgba(255, 255, 255, 0.9),
-            rgba(255, 255, 255, 0.9)
-        ),
-        url(img/skill.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
+    color: #0c2f54;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 0;
+}
+.mentor-card p {
+    text-align: center;
+    margin: 0;
+    color: #6c6c6c;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.mentor-card a {
+    background: #1e266d;
+    color: #fff;
+    padding: 10px 25px;
+    display: block;
+    margin: 0 auto 15px;
+    width: 140px;
 }
 
-.skill-section h2,
-.skill-section h3 {
-    color: #3c4761;
+/* Mentor Details Page Design */
+.mentor-details-page {
+    padding: 50px 0;
+}
+.mentor-img-card {
+    border: 1px solid transparent;
+    background: #fff;
+    box-shadow: 0 8px 28px 2px rgb(61 61 61 / 7%);
+    padding: 10px;
+    margin: 0 0 20px;
+}
+.mentor-img-card img {
+    display: block;
+    margin: 0 auto;
+}
+.mentor-individual-data {
+    padding: 5px 20px 0;
+}
+.mentor-individual-data h3 {
+    color: #00aeef;
+    font-size: 28px;
+    margin: 0px 0 15px;
+    font-weight: 600;
+}
+.mentor-individual-data h4 {
+    font-size: 20px;
+    color: #4e4e4e;
+    line-height: 1.5;
+    margin: 0;
+}
+.mentor-individual-data p {
+    margin: 10px 0 20px;
+    line-height: 1.8em;
+    color: #333;
+    font-size: 18px;
+}
+.mentor-badge .marketplace-badge {
+    text-align: left;
 }
 
-.skill-section h2::after {
-    background: #dfe8ed;
-}
-
-.skill-section .box {
-    margin-top: 4.5rem;
-}
-
-svg.radial-progress circle {
-    stroke-width: 5;
-}
-
-svg.radial-progress text {
-    fill: #3c4761;
-    font-size: 1.5rem;
-}
-
-svg.web-design circle {
-    stroke: #30bae7;
-}
-
-svg.html-css circle {
-    stroke: #d74680;
-}
-
-svg.graphic-desingn circle {
-    stroke: #15c7a8;
-}
-
-svg.ui-ux circle {
-    stroke: #eb7d4b;
+/* Medium Device */
+@media (min-width: 768px) {
+    .landing-banner {
+        height: 90vh;
+    }
+    .get-admission {
+        display: none;
+    }
 }

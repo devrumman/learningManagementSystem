@@ -56,6 +56,7 @@
             <span class="menu-item-label">All Batch</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{route('admition.manage')}}" class="sub-link">Admition Going On</a></li>
             <li class="sub-item"><a href="{{route('batch.manage')}}" class="sub-link">Manage All Batch</a></li>
             <li class="sub-item"><a href="{{route('batch.create')}}" class="sub-link">Create New Batch</a></li>
           </ul>

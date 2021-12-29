@@ -32,6 +32,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
     Route::get('/mentor', 'App\Http\Controllers\Frontend\PagesController@mentor')-> name('mentor');
     Route::get('/about', 'App\Http\Controllers\Frontend\PagesController@about')-> name('about');
     Route::get('/contact', 'App\Http\Controllers\Frontend\PagesController@contact')-> name('contact');
+    Route::post('/send-message', 'App\Http\Controllers\Frontend\PagesController@sendEmail')-> name('contact.send');
 
 
 // SSLCOMMERZ Start
@@ -60,7 +61,7 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 
 Route::group([ 'prefix' => '/admin' ], function()
 {
-    route::get('/dashboard', 'App\Http\Controllers\Backend\DashboardController@dashboard')->middleware(['auth', 'verified'])->name('admin/dashboard');
+    route::get('/dashboard', 'App\Http\Controllers\Backend\DashboardController@dashboard')->middleware(['auth', 'verified', 'role'])->name('admin/dashboard');
     
     //This Route For Branch Management//
     Route::group([ 'prefix' => '/branch' ], function()
@@ -109,6 +110,7 @@ Route::group([ 'prefix' => '/admin' ], function()
     //This Route For Batch Management//
     Route::group([ 'prefix' => '/batch' ], function()
     {
+        Route::get('/admition-manage', 'App\Http\Controllers\Backend\BatchController@admition')-> name('admition.manage');
         Route::get('/manage', 'App\Http\Controllers\Backend\BatchController@index')-> name('batch.manage');
         Route::get('/create', 'App\Http\Controllers\Backend\BatchController@create')-> name('batch.create');
         Route::post('/store', 'App\Http\Controllers\Backend\BatchController@store')-> name('batch.store');

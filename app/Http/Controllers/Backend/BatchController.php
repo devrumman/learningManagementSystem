@@ -26,6 +26,17 @@ class BatchController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function admition()
+    {
+        $batches = Batch::orderBy('id', 'desc')->get();
+        return view('backend.pages.batch.admitiongoingon', compact('batches'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

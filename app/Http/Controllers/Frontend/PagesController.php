@@ -9,8 +9,13 @@ use App\Models\Backend\Mentor;
 use App\Models\Backend\Batch;
 use App\Models\Backend\Notice;
 use App\Models\Backend\CourseCurriculam;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Str; 
+use Image;
+use File;
+use Auth;
+use Mail;
 
 class PagesController extends Controller
 {
@@ -106,7 +111,8 @@ class PagesController extends Controller
      */
     public function mentor()
     {
-        return view('frontend.pages.mentor');
+        $mentors = Mentor::orderBy('id', 'desc')->get();
+        return view('frontend.pages.mentor',  compact('mentors'));
     }
 
     
@@ -130,5 +136,23 @@ class PagesController extends Controller
     {
         return view('frontend.pages.contact');
     }
+     /**
+     *Contact Us Form Data Sending Process.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sendEmail(Request $request)
+    {
+         $emailData = [
+            'name'    => $request->name,
+            'email'   => $request->email,
+            'phone'   => $request->phone,
+            'massage' => $request->massage,
+         ];
 
+        //  dd($emailData); exit();
+
+         'Mail'::to('rummanahmed1991@gmail.com')->send(new ContactMail($emailData));
+         return back()->with('success_msg', 'Thank You for Contact With US.');
+    } 
 }

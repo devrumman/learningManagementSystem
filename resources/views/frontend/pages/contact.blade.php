@@ -23,16 +23,20 @@
 <section id="courses" class="courses">
   <div class="container">
     <div class="row">
-      
+
       <div class="col-lg-12">
         <h2 style="text-align: center; line-height: 1;">If Anyone Wants To Contact Me,</h2><h2 style="text-align: center; line-height: 1;">Please fill out the form and send me your message.</h2>
       </div>
-      
-
+    
         <div class="col-md-6 offset-md-3" style="margin: 30px auto;">
-
-          <form action="post" enctype="multipart/form-data">
+          
+          <form action="{{ route('contact.send')}}" method="post" enctype="multipart/form-data">
           @csrf
+
+          @if (Session::has('success_msg'))
+          <div class="alert alert-success">{{Session::get('success_msg')}}</div>
+          @endif
+
           <div class="form-grop">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" class="form-control" required="required" autocomplete="off" placeholder="Your Full Name">
@@ -47,7 +51,7 @@
           </div>
           <div class="form-grop">
             <label for="massage">Your Massage</label>
-            <textarea id="massage" name="massage" rows="6" class="form-control" placeholder="Write Your Massage....."></textarea>
+            <textarea id="" name="massage" rows="6" class="form-control" placeholder="Write Your Massage....."></textarea>
           </div>
 
           <div class="form-group">
