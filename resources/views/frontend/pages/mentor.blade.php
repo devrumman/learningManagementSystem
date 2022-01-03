@@ -54,8 +54,8 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
 
-                        @foreach ($mentors as $mentor)
-                        @if ($mentor->status == 1)
+                        @foreach ($batches as $batch)
+                        @if ($batch->mentor_id == 2)
 
                             <div class="tab-pane" id="basic-computer">
                                 <div class="row">                           
@@ -100,7 +100,7 @@
                                                 </div>
                                                     <h4>রাজীব কুমার বর্মন</h4>
                                                     <p>ডিজিটাল মার্কেটিং স্পেশালিস্ট</p>
-                                                    <a href="https://shikhbeshobai.com/our-mentors/rajib-kuman-borman">View Details</a>
+                                                    <a href="{{route('mentor.details')}}">View Details</a>
                                                 </div>
                                                 
                                             </div>

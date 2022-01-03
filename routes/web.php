@@ -30,6 +30,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
     Route::get('/batch/{slug}/admission', 'App\Http\Controllers\Frontend\PagesController@admission')-> name('getadmission');
 
     Route::get('/mentor', 'App\Http\Controllers\Frontend\PagesController@mentor')-> name('mentor');
+    Route::get('/mentor-details', 'App\Http\Controllers\Frontend\PagesController@mentorditals')-> name('mentor.details');
     Route::get('/about', 'App\Http\Controllers\Frontend\PagesController@about')-> name('about');
     Route::get('/contact', 'App\Http\Controllers\Frontend\PagesController@contact')-> name('contact');
     Route::post('/send-message', 'App\Http\Controllers\Frontend\PagesController@sendEmail')-> name('contact.send');

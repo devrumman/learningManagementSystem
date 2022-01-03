@@ -7,10 +7,10 @@
       <div class="row">
           <div class="col-md-6 col-lg-6 col-12 col-sm-12">
               <div class="hero-text">
-                  <h2>Change Your Life with Careers in IT.</h2>
-                  <p>A programming language is for thinking about programs, not for expressing programs you've already thought of. It should be a pencil, not a pen. </p>
+                  <h2>This Is E-Learning Platform / Applications.</h2>
+                  <p>The E-Learning Platform This platform is built using Laravel and is a web system that allows you to access it from a PC, Tablet or Smartphone with an Internet connection. With a Web services API’s ready you can integrate it directly to iOS or Android mobile applications.</p>
 
-                  <a href="{{route('allcourse')}}" class="btn btn-blue-1">View Courses</a>
+                  <a href="https://developerrumman.xyz/" class="btn btn-blue-1">View My WebSite</a>
               </div>
           </div>
 
@@ -346,7 +346,7 @@
                           <img src="{{asset('frontend/assets/images/lab.jpg')}}" class="box-video-img" alt="">
 
                           <div class="box-video-btn">
-                              <a href="https://www.youtube.com/watch?v=EZ-gHH4PycY" class="video-modal"> 
+                              <a href="https://www.youtube.com/watch?v=EvXBxgEEjlQ" class="video-modal"> 
                                 <img src="{{asset('frontend/assets/images/play.svg')}}" alt="">
                               </a>
                           </div>
@@ -368,7 +368,7 @@
       </section>
 
     <!--testimonials-->
-    <section id="testimonials" class="bg-color">
+    <section id="testimonials" class="bg-color-2">
         <div class="container-page ">
             <!--container-->
             <div class="container">

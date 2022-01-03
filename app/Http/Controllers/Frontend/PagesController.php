@@ -111,8 +111,19 @@ class PagesController extends Controller
      */
     public function mentor()
     {
+        $batches = Mentor::orderBy('id', 'desc')->get();
+        return view('frontend.pages.mentor',  compact('batches'));
+    }
+
+         /**
+     *Mentor Page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mentorditals()
+    {
         $mentors = Mentor::orderBy('id', 'desc')->get();
-        return view('frontend.pages.mentor',  compact('mentors'));
+        return view('frontend.pages.mentordetails',  compact('mentors'));
     }
 
     

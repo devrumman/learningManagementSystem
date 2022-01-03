@@ -145,7 +145,7 @@ hr.hr {
     background: #6fc7d9;
 }
 .bg-color-2 {
-    background: #fafafa;
+    background: #ffffff;
 }
 .font-20 {
     font-size: 20px;
@@ -414,6 +414,7 @@ a.navbar-brand {
 }
 .navbar-header .navbar {
     padding: 0;
+    background: #61c4d8;
 }
 img.logo-stikcy,
 .navbar-header .navbar.sticky img.logo {
@@ -429,7 +430,7 @@ img.logo-stikcy,
 }
 
 .navbar-header .navbar.sticky {
-    background-color: #ffffff;
+    background-color: #61c4d8;
     box-shadow: 0 8px 28px 2px rgba(61, 61, 61, 0.12);
 }
 .navbar-header .navbar-brand.white-logo span {
@@ -597,7 +598,7 @@ Hero
 }
 
 .hero {
-    background-color: #fff;
+    background-color: #f5f7fa;
     height: 100vh;
     position: relative;
     padding-bottom: 0;
@@ -990,6 +991,7 @@ span.plan-label {
 #video {
     padding-top: 80px;
     padding-bottom: 40px;
+    background: #f5f7fa;
 }
 img.box-video-img {
     width: 100%;
@@ -1767,6 +1769,7 @@ Testimonials
 }
 .newsletter {
     margin-top: 75px;
+    background: #f5f7fa;
 }
 /*----------------------------------------
 Footer
@@ -1777,7 +1780,7 @@ Footer
     margin-bottom: 60px;
     padding: 100px 60px 80px 60px;
     box-shadow: 0 8px 28px 2px rgba(61, 61, 61, 0.12);
-    background-color: #00ccffbe;
+    background-color: #61c4d8;
 }
 .newsletter-inner .form-control {
     width: 70%;
@@ -1815,6 +1818,7 @@ Footer
 .footer-bottom {
     padding-top: 12px;
     padding-bottom: 12px;
+    background: #61c4d8;
 }
 .copyright {
     text-align: center;
@@ -1843,7 +1847,7 @@ footer p.sucess-message {
     font-size: 13px;
 }
 #scrollUp {
-    background: #00ccffbe;
+    background: #61c4d8;
     border-radius: 8px;
     bottom: 30px;
     color: #ffffff;
@@ -3468,7 +3472,7 @@ hr {
     width: 100%;
     padding: 15px 0;
     text-align: center;
-    background-color: #2e367d;
+    background-color: #61c4d8;
     display: block;
     color: #fff;
 }
